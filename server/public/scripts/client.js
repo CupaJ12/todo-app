@@ -5,9 +5,9 @@ $(document).ready(onReady);
 
 function onReady() {
 console.log('in onready');
-
-
  $('#submitTask').on('click', collectTaskFunction);
+//  $('#complete').on('click', completeTask);
+// $('#delete').on('click', deleteTask)
 }
 
 ///////////////////clientSide functions///////////////////
@@ -17,7 +17,7 @@ console.log('in submitTaskFunction');
 task = $('#userTask').val();
 console.log('taskName: ', task);
 }
-
+let buttons = '<button id="complete">complete</button> <button id="delete">delete</button>';
 
 /////////////////// server/client interactions ///////////////////
 
@@ -45,3 +45,12 @@ function getTasks() {
     console.log('get tasks response from server', response);
     tasksToDOM(response);
 })}
+
+function tasksToDOM(taskList) {
+    console.log('in tasksToDOM');
+    $('#userTask').empty();
+    for (const task of taskList) {
+        $('#toDoList').append(task)
+        $('#userTask').append(buttons); // my attempt to append the buttons to each list item
+    }
+}
