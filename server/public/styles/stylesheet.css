@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: black;
   color: white;
 }
@@ -7,7 +7,7 @@ body {
     background-color: white;
     color: black;
   }
-}
+} */
 
 .ribbon {
   font-size: 20px !important;
@@ -56,5 +56,3 @@ body {
   right: 0;
   border-width: 1em 1em 0 0;
  }
-
- 

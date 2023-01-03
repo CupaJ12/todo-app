@@ -1,6 +1,15 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+#SQL:
+
+CREATE TABLE "tasks" (
+	"id" SERIAL PRIMARY KEY,
+	"description" VARCHAR(200) NOT NULL, 
+	"completed" BOOLEAN DEFAULT FALSE,
+	"published" TIMESTAMP DEFAULT NOW(),
+);
+
+
 
 ## Description
 
